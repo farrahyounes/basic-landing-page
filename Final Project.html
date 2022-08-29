@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Egypt 🐪</title>
+    <style>
+      .project {
+        display: block;
+        margin: 20px auto;
+        background: linear-gradient(
+          68.6deg,
+          rgb(252, 165, 241) 1.8%,
+          rgb(181, 255, 255) 100.5%
+        );
+        align-items: center;
+        max-width: 800px;
+        padding: 30px;
+        border-radius: 10px;
+      }
+
+      h1 {
+        text-align: center;
+        color: black;
+        font-size: 50px;
+      }
+      h2 {
+        text-align: center;
+        color: blueviolets;
+        font-size: 20px;
+        font-family: cursive;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 500px;
+        border-radius: 10px;
+      }
+      p {
+        text-align: center;
+        color: #680747;
+        line-height: 1.5;
+        font-size: 15px;
+      }
+      .travel {
+        text-align: center;
+        display: block;
+      }
+      .wiki {
+        font-size: 18px;
+        display: block;
+        margin-top: 5px;
+        text-decoration: none;
+        color: #680747;
+      }
+      .wiki:hover {
+        text-decoration: underline;
+      }
+      button {
+        display: block;
+        margin: 10px auto;
+        font-size: 16px;
+        line-height: 22px;
+        transition: all 300ms ease-in-out;
+        box-shadow: 2px 5px 5px rgba(0 0 0 / 20%);
+        padding: 15px 25px;
+        border-radius: 30px;
+        border: 1px solid violet;
+        color: black;
+        background: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+      }
+      button:hover {
+        cursor: pointer;
+        background: #b9f8fe;
+        color: black;
+        border: 1px solid #b9f8fe;
+      }
+      .footer {
+        text-align: center;
+        opacity: 0.7;
+        font-family: cursive;
+        font-size: 10px;
+        font-weight: bolder;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="project">
+      <h1>I ❤ Egypt</h1>
+      <h2>
+        Origin of Civilisation & Home of the Pyramids! <br />
+        The only Wonder that still lives...
+      </h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/036/950/original/60495947_303.jpg?1655044973"
+        alt="Pyramids and Sphinx"
+      />
+
+      <p>
+        <em> <strong> Egypt </strong> </em> has one of the longest histories of
+        any country, tracing its heritage along the Nile Delta back to the
+        6th–4th millennia BCE. Considered a cradle of civilisation, Ancient
+        Egypt saw some of the earliest developments of writing, agriculture,
+        urbanisation, organised religion and central government.[15] Iconic
+        monuments such as the Giza Necropolis and its Great Sphinx, as well the
+        ruins of Memphis, Thebes, Karnak, and the Valley of the Kings, reflect
+        this legacy and remain a significant focus of scientific and popular
+        interest.
+        <br />
+        <a
+          href="https://en.wikipedia.org/wiki/Egypt"
+          target="_blank"
+          class="wiki"
+        >
+          <strong> Learn more on Wikipedia </strong>
+        </a>
+      </p>
+      <button>Visit Egypt</button>
+
+      <span class="travel"> ✈️✈️✈️✈️ </span>
+      <hr />
+      <div class="footer">This page was built by Farrah Younes</div>
+      <hr />
+    </div>
+    <script>
+      function visitEgypt() {
+        let name = prompt("What is your name?");
+        let activity = prompt("What do you want to see in Egypt the most?");
+        let passport = prompt("Do you have a passport? yes or no");
+        passport = passport.toLowerCase().trim();
+        if (passport === "yes" || passport === "yep" || passport === "yeah") {
+          alert(
+            "Awesome, " +
+              name +
+              "! " +
+              "We'll send you travel packages which includes a trip to the " +
+              activity +
+              "."
+          );
+        } else {
+          alert("Sorry, you can't go until you have a passport😭");
+        }
+      }
+      let button = document.querySelector("button");
+      button.addEventListener("click", visitEgypt);
+    </script>
+  </body>
+</html>
